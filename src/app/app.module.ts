@@ -7,8 +7,6 @@ import { AppComponent } from './app.component';
 import { AddGamePageComponent } from './add-game-page/add-game-page.component';
 import { ViewGamePageComponent } from './view-game-page/view-game-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GameService } from './services/game.service';
-import { PusherService } from './services/pusher.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -25,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatTableModule,
     HttpClientModule
   ],
-  providers: [GameService, PusherService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
