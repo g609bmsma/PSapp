@@ -1,2 +1,31 @@
 <button mat-button [routerLink]="['']" aria-label="Go To Home">Home</button>
 <h1>Add Game</h1>
+
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Platform">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Genre">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Release Date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Players">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Publisher">
+  </mat-form-field>
+
+</div>
