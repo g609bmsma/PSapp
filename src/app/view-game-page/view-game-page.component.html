@@ -46,8 +46,13 @@
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
 
-<div class="container" fxLayout="row" fxLayoutAlign="center" style="margin-top: 10px;">
-  <div fxFlex="100%">
+<div class="container" fxLayout="column" fxLayoutAlign="center">
+  <div fxFlex="100%" style="margin-top: 10px;">
+    <button mat-raised-button (click)="fileInput.click()">UPLOAD CSV</button>
+    <input hidden #fileInput id="file" type="file" name="files" class="form-control" #uploads
+      (change)="onChange(uploads.files)" multiple value="process">
+  </div>
+  <div fxFlex="100%" style="margin-top: 10px;">
     <button mat-raised-button (click)="exportToCSV()">EXPORT TO CSV</button>
   </div>
 </div>

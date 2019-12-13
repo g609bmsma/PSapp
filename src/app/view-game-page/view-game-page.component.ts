@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from '../interfaces/game';
 import { ExportToCsv } from 'export-to-csv';
+import * as Papa from 'papaparse';
 
-const GAME_DATA: Game[] = [];
+let GAME_DATA: Game[] = [];
 
 @Component({
   selector: 'app-view-game-page',
@@ -31,6 +32,19 @@ export class ViewGamePageComponent implements OnInit {
 
   ngOnInit() {
     GAME_DATA.push(history.state);
+  }
+
+  onChange(files: File[]) {
+    if (files[0]) {
+      Papa.parse(files[0], {
+        header: true,
+        skipEmptyLines: true,
+        complete: (result, file) => {
+          console.log(result);
+          GAME_DATA = result.data;
+        }
+      });
+    }
   }
 
   exportToCSV() {
