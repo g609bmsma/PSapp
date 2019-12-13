@@ -16,13 +16,14 @@ export class ViewGamePageComponent implements OnInit {
 
   options = {
     fieldSeparator: ',',
+    filename: "Games",
     quoteStrings: '"',
     decimalSeparator: '.',
-    showLabels: true,
-    showTitle: true,
+    showLabels: false,
+    showTitle: false,
     title: "Games",
     useTextFile: false,
-    useBom: true,
+    useBom: false,
     useKeysAsHeaders: true,
   };
 
@@ -39,8 +40,8 @@ export class ViewGamePageComponent implements OnInit {
       Papa.parse(files[0], {
         header: true,
         skipEmptyLines: true,
-        complete: (result, file) => {
-          console.log(result);
+        complete: (result) => {
+          console.log(result.data);
           GAME_DATA = result.data;
         }
       });
