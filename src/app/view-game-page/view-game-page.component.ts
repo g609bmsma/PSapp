@@ -3,8 +3,6 @@ import { Game } from '../interfaces/game';
 import { Router, ActivatedRoute } from '@angular/router';
 
 const GAME_DATA: Game[] = [
-  { id: 1, name: 'GOD OF WAR', platform: 'PS4', genre: 'FIGHTING', releaseDate: '01-JULY-2018', players: 4, publisher: 'SONY INTERACTIVE ENTERTAINMENT' },
-  { id: 2, name: 'SPIDER-MAN', platform: 'PS4', genre: 'ADVENTURE', releaseDate: '07-SEPT-2018', players: 1, publisher: 'SONY INTERACTIVE ENTERTAINMENT' }
 ];
 
 @Component({
@@ -15,14 +13,15 @@ const GAME_DATA: Game[] = [
 export class ViewGamePageComponent {
   displayedColumns: string[] = ['name', 'platform', 'genre', 'releaseDate', 'players', 'publisher'];
   dataSource = GAME_DATA;
-  game;
+  game
+
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     console.log(this.router.getCurrentNavigation().extras.state);
   }
 
   ngOnInit() {
-    //console.log(history.state);
     this.game = history.state;
+    GAME_DATA.push(this.game);
   }
 }
