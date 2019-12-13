@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddGamePageComponent implements OnInit {
 
+  public game = { id: 1, name: "", platform: "", genre: "", releaseDate: "", players: "", publisher: "" };
+
   constructor() { }
 
   ngOnInit() {

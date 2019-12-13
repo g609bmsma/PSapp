@@ -4,19 +4,19 @@
   <div class="container" fxLayout="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" fxFlex="50%">
     <div fxFlex="33%">
       <mat-form-field>
-        <input matInput placeholder="Name">
+        <input matInput placeholder="Name" [(ngModel)]="game.name">
       </mat-form-field>
     </div>
 
     <div fxFlex="33%">
       <mat-form-field>
-        <input matInput placeholder="Platform">
+        <input matInput placeholder="Platform" [(ngModel)]="game.platform">
       </mat-form-field>
     </div>
 
     <div fxFlex="33%">
       <mat-form-field>
-        <input matInput placeholder="Genre">
+        <input matInput placeholder="Genre" [(ngModel)]="game.genre">
       </mat-form-field>
     </div>
   </div>
@@ -24,7 +24,7 @@
   <div class="container" fxLayout="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" fxFlex="50%">
     <div fxFlex="33%">
       <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Release Date">
+        <input matInput [matDatepicker]="picker" placeholder="Release Date" [(ngModel)]="game.releaseDate">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
@@ -32,17 +32,19 @@
 
     <div fxFlex="33%">
       <mat-form-field>
-        <input matInput placeholder="Players">
+        <input matInput placeholder="Players" [(ngModel)]="game.players">
       </mat-form-field>
     </div>
 
     <div fxFlex="33%">
       <mat-form-field>
-        <input matInput placeholder="Publisher">
+        <input matInput placeholder="Publisher" [(ngModel)]="game.publisher">
       </mat-form-field>
     </div>
   </div>
 </div>
+
+{{ game | json }}
 
 <div class="container" fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
   <div fxFlex="100%">
