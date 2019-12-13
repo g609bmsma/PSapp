@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { Game } from '../interfaces/game';
-import { Router, ActivatedRoute } from '@angular/router';
 
-const GAME_DATA: Game[] = [
-];
+const GAME_DATA: Game[] = [];
 
 @Component({
   selector: 'app-view-game-page',
@@ -13,14 +11,10 @@ const GAME_DATA: Game[] = [
 export class ViewGamePageComponent {
   displayedColumns: string[] = ['name', 'platform', 'genre', 'releaseDate', 'players', 'publisher', 'boxArt'];
   dataSource = GAME_DATA;
-  game
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
-    console.log(this.router.getCurrentNavigation().extras.state);
-  }
+  constructor() { }
 
   ngOnInit() {
-    this.game = history.state;
-    GAME_DATA.push(this.game);
+    GAME_DATA.push(history.state);
   }
 }
