@@ -1,33 +1,47 @@
-<button mat-button [routerLink]="['']" aria-label="Go To Home">Home</button>
 <h1>Add Game</h1>
 
-<div>
-  <mat-form-field>
-    <input matInput placeholder="Name">
-  </mat-form-field>
+<div class="container" fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <div class="container" fxLayout="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" fxFlex="50%">
+    <div fxFlex="33%">
+      <mat-form-field>
+        <input matInput placeholder="Name">
+      </mat-form-field>
+    </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Platform">
-  </mat-form-field>
+    <div fxFlex="33%">
+      <mat-form-field>
+        <input matInput placeholder="Platform">
+      </mat-form-field>
+    </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Genre">
-  </mat-form-field>
+    <div fxFlex="33%">
+      <mat-form-field>
+        <input matInput placeholder="Genre">
+      </mat-form-field>
+    </div>
+  </div>
 
-  <mat-form-field>
-    <input matInput [matDatepicker]="picker" placeholder="Release Date">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
+  <div class="container" fxLayout="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" fxFlex="50%">
+    <div fxFlex="33%">
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Release Date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Players">
-  </mat-form-field>
+    <div fxFlex="33%">
+      <mat-form-field>
+        <input matInput placeholder="Players">
+      </mat-form-field>
+    </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Publisher">
-  </mat-form-field>
-
-  <button mat-button>ADD GAME</button>
-
+    <div fxFlex="33%">
+      <mat-form-field>
+        <input matInput placeholder="Publisher">
+      </mat-form-field>
+    </div>
+  </div>
 </div>
+
+<button mat-button>ADD GAME</button>

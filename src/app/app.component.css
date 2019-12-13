@@ -21,6 +21,10 @@
   margin: 0 16px;
 }
 
+.toolbar a {
+  margin: 0 16px;
+}
+
 .content {
   display: flex;
   margin: 32px auto;
