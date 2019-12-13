@@ -15,7 +15,6 @@ export class ViewGamePageComponent {
   dataSource = GAME_DATA;
   game
 
-
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     console.log(this.router.getCurrentNavigation().extras.state);
   }
