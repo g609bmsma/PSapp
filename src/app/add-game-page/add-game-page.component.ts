@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AddGamePageComponent implements OnInit {
 
-  public game = { id: 1, name: '', platform: '', genre: '', releaseDate: '', players: '', publisher: '', boxArt: '' };
+  public game = { name: '', platform: '', genre: '', releaseDate: '', players: '', publisher: '', boxArt: '' };
 
   constructor(private router: Router) { }
 
