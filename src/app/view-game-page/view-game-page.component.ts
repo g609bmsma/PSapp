@@ -41,7 +41,6 @@ export class ViewGamePageComponent implements OnInit {
         header: true,
         skipEmptyLines: true,
         complete: (result) => {
-          console.log(result.data);
           GAME_DATA = result.data;
         }
       });

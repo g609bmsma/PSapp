@@ -17,7 +17,6 @@ export class AddGamePageComponent implements OnInit {
 
   addGame() {
     this.router.navigateByUrl('/view', { state: this.game });
-    console.log(this.game);
   }
 
 }
