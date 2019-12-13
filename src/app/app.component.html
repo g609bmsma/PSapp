@@ -1,4 +1,3 @@
-<!-- Toolbar -->
 <div class="toolbar" role="banner">
   <a [routerLink]="['']">
     <img width="40" alt="PlayStation Logo" src="../assets/PlayStation_logo.svg" aria-label="Return to home"
@@ -12,13 +11,15 @@
 
   <router-outlet></router-outlet>
 
-  <div class="container" fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
-    <div fxFlex="50%">
-      <button mat-raised-button [routerLink]="['/add']" aria-label="Add a new game">Add a new game</button>
-    </div>
+  <footer>
+    <div class="container" fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+      <div fxFlex="50%">
+        <button mat-raised-button [routerLink]="['/add']" aria-label="Add a new game">Add a new game</button>
+      </div>
 
-    <div fxFlex="50%">
-      <button mat-raised-button [routerLink]="['/view']" aria-label="View games">View games</button>
+      <div fxFlex="50%">
+        <button mat-raised-button [routerLink]="['/view']" aria-label="View games">View games</button>
+      </div>
     </div>
-  </div>
+  </footer>
 </div>
