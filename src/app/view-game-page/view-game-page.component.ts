@@ -11,7 +11,7 @@ const GAME_DATA: Game[] = [
   styleUrls: ['./view-game-page.component.css']
 })
 export class ViewGamePageComponent {
-  displayedColumns: string[] = ['name', 'platform', 'genre', 'releaseDate', 'players', 'publisher'];
+  displayedColumns: string[] = ['name', 'platform', 'genre', 'releaseDate', 'players', 'publisher', 'boxArt'];
   dataSource = GAME_DATA;
   game
 

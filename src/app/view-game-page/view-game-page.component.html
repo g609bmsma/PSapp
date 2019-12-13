@@ -35,6 +35,13 @@
     <td mat-cell *matCellDef="let game"> {{game.publisher}} </td>
   </ng-container>
 
+  <ng-container matColumnDef="boxArt">
+    <th mat-header-cell *matHeaderCellDef> Box Art </th>
+    <td mat-cell *matCellDef="let game">
+      <img [src]="game.boxArt" />
+    </td>
+  </ng-container>
+
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

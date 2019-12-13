@@ -6,4 +6,5 @@ export interface Game {
     releaseDate?: string;
     players: number;
     publisher: string;
+    boxArt: HTMLImageElement;
 }
