@@ -16,12 +16,12 @@ export class ViewGamePageComponent implements OnInit {
 
   options = {
     fieldSeparator: ',',
-    filename: "Games",
+    filename: 'Games',
     quoteStrings: '"',
     decimalSeparator: '.',
     showLabels: false,
     showTitle: false,
-    title: "Games",
+    title: 'Games',
     useTextFile: false,
     useBom: false,
     useKeysAsHeaders: true,
