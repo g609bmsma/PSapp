@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Game } from '../interfaces/game';
 
 const GAME_DATA: Game[] = [];
@@ -8,7 +8,7 @@ const GAME_DATA: Game[] = [];
   templateUrl: './view-game-page.component.html',
   styleUrls: ['./view-game-page.component.css']
 })
-export class ViewGamePageComponent {
+export class ViewGamePageComponent implements OnInit {
   displayedColumns: string[] = ['name', 'platform', 'genre', 'releaseDate', 'players', 'publisher', 'boxArt'];
   dataSource = GAME_DATA;
 

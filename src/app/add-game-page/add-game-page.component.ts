@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AddGamePageComponent implements OnInit {
 
-  public game = { id: 1, name: "", platform: "", genre: "", releaseDate: "", players: "", publisher: "", boxArt: "" };
+  public game = { id: 1, name: '', platform: '', genre: '', releaseDate: '', players: '', publisher: '', boxArt: '' };
 
   constructor(private router: Router) { }
 
@@ -17,7 +17,7 @@ export class AddGamePageComponent implements OnInit {
 
   addGame() {
     this.router.navigateByUrl('/view', { state: this.game });
-    console.log(this.game)
+    console.log(this.game);
   }
 
 }
