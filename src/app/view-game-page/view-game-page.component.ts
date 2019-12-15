@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Game } from '../interfaces/game';
+import { MatPaginator, MatTableDataSource } from '@angular/material';
 import { ExportToCsv } from 'export-to-csv';
 import * as Papa from 'papaparse';
 
@@ -12,7 +13,7 @@ let GAME_DATA: Game[] = [];
 })
 export class ViewGamePageComponent implements OnInit {
   displayedColumns: string[] = ['name', 'platform', 'genre', 'releaseDate', 'players', 'publisher', 'boxArt'];
-  dataSource = GAME_DATA;
+  dataSource = new MatTableDataSource<Game>(GAME_DATA);
 
   options = {
     fieldSeparator: ',',
@@ -31,8 +32,19 @@ export class ViewGamePageComponent implements OnInit {
 
   constructor() { }
 
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
   ngOnInit() {
     GAME_DATA.push(history.state);
+    this.dataSource.paginator = this.paginator;
+  }
+
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 
   onChange(files: File[]) {
