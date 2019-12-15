@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Game } from '../interfaces/game';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import { ExportToCsv } from 'export-to-csv';
 import * as Papa from 'papaparse';
 
@@ -33,10 +33,12 @@ export class ViewGamePageComponent implements OnInit {
   constructor() { }
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   ngOnInit() {
     GAME_DATA.push(history.state);
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   applyFilter(filterValue: string) {

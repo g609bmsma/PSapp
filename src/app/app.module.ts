@@ -9,7 +9,8 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatToolbarModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  MatSortModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -43,7 +44,8 @@ import { HomeComponent } from './home/home.component';
     ReactiveFormsModule,
     FlexLayoutModule,
     MatToolbarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent]
